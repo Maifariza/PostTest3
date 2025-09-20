@@ -50,6 +50,17 @@
 
 ---
 
+# Struktur Program
+
+  Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-masing. Kelas utama berada di Main.java yang berfungsi sebagai entry point program. Di dalam kelas ini terdapat menu interaktif yang digunakan pengguna untuk menambah, menampilkan,       memperbarui, menghapus, dan mencari data barang. Main juga menjadi penghubung langsung dengan kelas Service agar logika program dapat berjalan sesuai perintah pengguna.
+
+  Selanjutnya ada kelas Service.java yang berada di dalam package service. Kelas ini bertanggung jawab mengelola data barang, mulai dari penyimpanan, penambahan data baru, penghapusan, pencarian, hingga menampilkan seluruh data. Dengan kata lain, Service menjadi pusat logika bisnis program.
+
+  Untuk data inti, saya menggunakan package model. Di dalamnya terdapat kelas Barang sebagai superclass. Kelas Barang menyimpan semua properti umum, seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan. Semua atribut dibuat private dan diakses menggunakan getter dan setter, sehingga konsep encapsulation diterapkan.
+
+  Dari kelas Barang, saya membuat dua subclass, yaitu barangLelang dan barangWarisan. edua kelas ini mewarisi semua atribut yang ada di kelas Barang, tapi punya cara kerja khusus karena saya menggunakan method overriding pada method infoSingkat(). Artinya, saat objek BarangLelang dipanggil, program akan menambahkan keterangan “tipe: LELANG”, sedangkan jika objek BarangWarisan dipanggil, keterangan yang muncul adalah “tipe: WARISAN”. Bagian ini menunjukkan penerapan inheritance (pewarisan) dengan satu induk dan dua anak, sekaligus contoh polimorfisme karena satu method bisa memberikan hasil yang berbeda tergantung objeknya.
+  
+---
 # Penjelasan Program
 
 1. Encapsulation (Getter dan Setter)
@@ -92,14 +103,6 @@
 
    Di dalamnya, method infoSingkat() juga dioverride, tetapi dengan tambahan label "tipe: WARISAN". Jadi, ketika objek BarangWarisan dipanggil, output akan menampilkan keterangan berbeda, menegaskan bahwa barang tersebut berasal dari warisan.
 
-
-  Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-masing. Kelas utama berada di Main.java yang berfungsi sebagai entry point program. Di dalam kelas ini terdapat menu interaktif yang digunakan pengguna untuk menambah, menampilkan,       memperbarui, menghapus, dan mencari data barang. Main juga menjadi penghubung langsung dengan kelas Service agar logika program dapat berjalan sesuai perintah pengguna.
-
-  Selanjutnya ada kelas Service.java yang berada di dalam package service. Kelas ini bertanggung jawab mengelola data barang, mulai dari penyimpanan, penambahan data baru, penghapusan, pencarian, hingga menampilkan seluruh data. Dengan kata lain, Service menjadi pusat logika bisnis program.
-
-  Untuk data inti, saya menggunakan package model. Di dalamnya terdapat kelas Barang sebagai superclass. Kelas Barang menyimpan semua properti umum, seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan. Semua atribut dibuat private dan diakses menggunakan getter dan setter, sehingga konsep encapsulation diterapkan.
-
-  Dari kelas Barang, saya membuat dua subclass, yaitu barangLelang dan barangWarisan. edua kelas ini mewarisi semua atribut yang ada di kelas Barang, tapi punya cara kerja khusus karena saya menggunakan method overriding pada method infoSingkat(). Artinya, saat objek BarangLelang dipanggil, program akan menambahkan keterangan “tipe: LELANG”, sedangkan jika objek BarangWarisan dipanggil, keterangan yang muncul adalah “tipe: WARISAN”. Bagian ini menunjukkan penerapan inheritance (pewarisan) dengan satu induk dan dua anak, sekaligus contoh polimorfisme karena satu method bisa memberikan hasil yang berbeda tergantung objeknya.
 
 # Penjelasan Overriding
 
