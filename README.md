@@ -87,6 +87,7 @@
     Package ini berisi class Main yang menjadi entry point program. Class ini berfungsi sebagai View, yaitu menampilkan menu utama kepada user dan menerima input pilihan. Setelah menerima input, class ini akan memanggil fungsi yang sesuai di Controller (Service). Karena hanya berfungsi sebagai antarmuka pengguna, class ini tidak diwajibkan memiliki properti maupun konstruktor.
 
 ---
+# Struktur Kelas
 
   Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-masing. Kelas utama berada di Main.java yang berfungsi sebagai entry point program. Di dalam kelas ini terdapat menu interaktif yang digunakan pengguna untuk menambah, menampilkan,       memperbarui, menghapus, dan mencari data barang. Main juga menjadi penghubung langsung dengan kelas Service agar logika program dapat berjalan sesuai perintah pengguna.
 
@@ -96,6 +97,26 @@
 
   Dari kelas Barang, saya membuat dua subclass, yaitu barangLelang dan barangWarisan. edua kelas ini mewarisi semua atribut yang ada di kelas Barang, tapi punya cara kerja khusus karena saya menggunakan method overriding pada method infoSingkat(). Artinya, saat objek BarangLelang dipanggil, program akan menambahkan keterangan “tipe: LELANG”, sedangkan jika objek BarangWarisan dipanggil, keterangan yang muncul adalah “tipe: WARISAN”. Bagian ini menunjukkan penerapan inheritance (pewarisan) dengan satu induk dan dua anak, sekaligus contoh polimorfisme karena satu method bisa memberikan hasil yang berbeda tergantung objeknya.
 
+# Penjelasan Overriding
+
+1. Method di Super Class (Barang)
+
+   <img width="546" height="109" alt="image" src="https://github.com/user-attachments/assets/cc08e63a-4e99-4d41-8144-7deb76c4344c" />
+
+     Method infoSingkat() didefinisikan dalam kelas Barang sebagai method default untuk menampilkan informasi barang. Isi yang ditampilkan meliputi id, nama, kategori, asal, dan sumber. Method ini akan dipanggil secara langsung ketika objek berasal dari kelas Barang tanpa perubahan tambahan.
+   
+2. Overriding di Subclass barangLelang
+
+  <img width="485" height="85" alt="image" src="https://github.com/user-attachments/assets/7b7f4335-57bc-4df1-9c4e-7886d30f67d9" />
+
+  Pada kelas BarangLelang, method infoSingkat() dioverride. Keyword @Override menunjukkan bahwa method ini menimpa method yang sama dari superclass. Bedanya, pada subclass ini ditambahkan dengan keterangan khusus "tipe: LELANG". Dengan begitu, saat objek BarangLelang dipanggil, hasil yang ditampilkan berbeda dari superclass.
+   
+3. Overriding di Subclass barangWarisan
+   
+  <img width="493" height="101" alt="image" src="https://github.com/user-attachments/assets/3655f49a-f67a-4e64-becb-f648cbb85620" />
+
+   Hal serupa juga dilakukan di kelas BarangWarisan. Method infoSingkat() ditimpa (override) sehingga output memiliki tambahan "tipe: WARISAN". Perbedaan ini menunjukkan bahwa meskipun kedua subclass mewarisi atribut dan method dari kelas induk, masing-masing dapat menyesuaikan perilakunya sendiri.
+   
 ---
 
 <h1 align="center">Menu Utama AntikAesthetic</h1>
