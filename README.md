@@ -33,6 +33,96 @@
 
 ---
 
+
+<h1 align="center">Penerapan MVC dan Struktur Packages Program</h1>
+
+1. Package model (Model)
+   
+    Package ini berisi class Model yang merepresentasikan data barang antik. Class ini memiliki beberapa properti seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan. Semua properti dibuat dengan access modifier private untuk menjaga prinsip enkapsulasi. Data diakses dan diubah melalui getter dan setter, serta diinisialisasi menggunakan konstruktor. Dengan adanya package ini, semua data barang antik tersimpan rapi dalam bentuk objek.
+
+2. Package service (Controller)
+
+    Package ini berisi class Service yang mengatur logika bisnis program. Semua operasi CRUD (Create, Read, Update, Delete) dijalankan di sini, termasuk juga fitur pencarian data dan validasi input. Controller ini menerima perintah dari View (Main), memprosesnya dengan memanfaatkan data dari Model, lalu mengembalikan hasilnya kembali ke View. Dengan cara ini, logika program terpusat di satu tempat dan tidak tercampur dengan tampilan.
+
+3. Package main (View)
+   
+    Package ini berisi class Main yang menjadi entry point program. Class ini berfungsi sebagai View, yaitu menampilkan menu utama kepada user dan menerima input pilihan. Setelah menerima input, class ini akan memanggil fungsi yang sesuai di Controller (Service). Karena hanya berfungsi sebagai antarmuka pengguna, class ini tidak diwajibkan memiliki properti maupun konstruktor.
+
+---
+
+# Penjelasan Program
+
+1. Encapsulation (Getter dan Setter)
+
+   <img width="720" height="213" alt="image" src="https://github.com/user-attachments/assets/77820a0e-344b-4313-b538-48370a406f25" />
+
+   Pada kelas Barang, semua atribut didefinisikan dengan akses private, misalnya private int id, private String nama, dan seterusnya. Kata kunci private berarti variabel tersebut tidak bisa dipanggil atau diubah secara langsung dari luar kelas. Jadi, kalau ada kode di luar kelas Barang yang mencoba mengakses barang.id secara langsung, program akan error.
+   
+   Untuk memberikan akses, dibuatlah getter dan setter:
+   
+   <img width="784" height="590" alt="image" src="https://github.com/user-attachments/assets/e0ee01a3-cb76-4500-97b3-067164af989c" />
+
+   Getter adalah method yang dipakai untuk membaca nilai, contohnya getNama() untuk mengambil nilai dari atribut nama. Sedangkan setter adalah method yang dipakai untuk mengubah nilai, contohnya setNama(String nama) untuk mengganti nama barang.
+
+   Dengan cara ini, kita bisa menambahkan aturan validasi di dalam setter, misalnya memastikan harga tidak boleh bernilai negatif, atau tahun tidak boleh lebih kecil dari nol. Jadi, selain melindungi data, encapsulation juga memberi kendali penuh kepada programmer agar data yang masuk tetap konsisten dan valid.
+
+2. Inheritance
+
+   a. Superclass Barang
+
+      <img width="302" height="220" alt="image" src="https://github.com/user-attachments/assets/bc702751-1b07-4461-8873-70d7208efe00" />
+
+      Kelas Barang adalah superclass atau kelas induk. Di kelas ini didefinisikan semua atribut umum yang dimiliki setiap barang, misalnya id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan.
+
+      Selain atribut, kelas Barang juga memiliki method infoSingkat() yang berfungsi untuk menampilkan data inti barang. Karena sifatnya umum, semua subclass bisa langsung mewarisi atribut maupun method yang ada di Barang tanpa perlu menuliskannya lagi. Dengan begitu, Barang menjadi pondasi utama yang menyediakan struktur dasar bagi objek-objek turunan.
+
+   b. Subclass barangLelang
+   
+   <img width="797" height="91" alt="image" src="https://github.com/user-attachments/assets/70262dc2-52d3-444b-b156-ad38d36e5468" />
+   
+   Kelas BarangLelang adalah turunan dari Barang. Karena mewarisi semua atribut dari kelas induk, BarangLelang otomatis punya id, nama, kategori, hingga infoSingkat().
+   
+   Bedanya, di kelas ini method infoSingkat() ditimpa (override). Hasilnya, setiap kali objek BarangLelang dipanggil, output akan menambahkan label khusus "tipe: LELANG". Dengan begitu, meskipun struktur datanya sama dengan Barang, objek lelang bisa dibedakan lewat tampilan informasinya.
+
+   c. Subclass barangWarisan
+   
+   <img width="790" height="97" alt="image" src="https://github.com/user-attachments/assets/7dcba63a-9c14-49de-bf6d-9cd574d74c46" />
+
+   Kelas BarangWarisan juga merupakan turunan dari Barang. Sama seperti BarangLelang, ia mewarisi seluruh atribut dan method dari kelas induk.
+
+   Di dalamnya, method infoSingkat() juga dioverride, tetapi dengan tambahan label "tipe: WARISAN". Jadi, ketika objek BarangWarisan dipanggil, output akan menampilkan keterangan berbeda, menegaskan bahwa barang tersebut berasal dari warisan.
+
+
+  Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-masing. Kelas utama berada di Main.java yang berfungsi sebagai entry point program. Di dalam kelas ini terdapat menu interaktif yang digunakan pengguna untuk menambah, menampilkan,       memperbarui, menghapus, dan mencari data barang. Main juga menjadi penghubung langsung dengan kelas Service agar logika program dapat berjalan sesuai perintah pengguna.
+
+  Selanjutnya ada kelas Service.java yang berada di dalam package service. Kelas ini bertanggung jawab mengelola data barang, mulai dari penyimpanan, penambahan data baru, penghapusan, pencarian, hingga menampilkan seluruh data. Dengan kata lain, Service menjadi pusat logika bisnis program.
+
+  Untuk data inti, saya menggunakan package model. Di dalamnya terdapat kelas Barang sebagai superclass. Kelas Barang menyimpan semua properti umum, seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan. Semua atribut dibuat private dan diakses menggunakan getter dan setter, sehingga konsep encapsulation diterapkan.
+
+  Dari kelas Barang, saya membuat dua subclass, yaitu barangLelang dan barangWarisan. edua kelas ini mewarisi semua atribut yang ada di kelas Barang, tapi punya cara kerja khusus karena saya menggunakan method overriding pada method infoSingkat(). Artinya, saat objek BarangLelang dipanggil, program akan menambahkan keterangan “tipe: LELANG”, sedangkan jika objek BarangWarisan dipanggil, keterangan yang muncul adalah “tipe: WARISAN”. Bagian ini menunjukkan penerapan inheritance (pewarisan) dengan satu induk dan dua anak, sekaligus contoh polimorfisme karena satu method bisa memberikan hasil yang berbeda tergantung objeknya.
+
+# Penjelasan Overriding
+
+1. Method di Super Class (Barang)
+
+   <img width="546" height="109" alt="image" src="https://github.com/user-attachments/assets/cc08e63a-4e99-4d41-8144-7deb76c4344c" />
+
+     Method infoSingkat() didefinisikan dalam kelas Barang sebagai method default untuk menampilkan informasi barang. Isi yang ditampilkan meliputi id, nama, kategori, asal, dan sumber. Method ini akan dipanggil secara langsung ketika objek berasal dari kelas Barang tanpa perubahan tambahan.
+   
+2. Overriding di Subclass barangLelang
+
+   <img width="485" height="85" alt="image" src="https://github.com/user-attachments/assets/7b7f4335-57bc-4df1-9c4e-7886d30f67d9" />
+
+   Pada kelas BarangLelang, method infoSingkat() dioverride. Keyword @Override menunjukkan bahwa method ini menimpa method yang sama dari superclass. Bedanya, pada subclass ini ditambahkan dengan keterangan khusus "tipe: LELANG". Dengan begitu, saat objek BarangLelang dipanggil, hasil yang ditampilkan berbeda dari superclass.
+   
+3. Overriding di Subclass barangWarisan
+
+   <img width="493" height="101" alt="image" src="https://github.com/user-attachments/assets/3655f49a-f67a-4e64-becb-f648cbb85620" />
+
+   Hal serupa juga dilakukan di kelas BarangWarisan. Method infoSingkat() ditimpa (override) sehingga output memiliki tambahan "tipe: WARISAN". Perbedaan ini menunjukkan bahwa meskipun kedua subclass mewarisi atribut dan method dari kelas induk, masing-masing dapat menyesuaikan perilakunya sendiri.
+
+---
+
 <h1 align="center">Alur Program AntikAesthetic</h1>
 
   Saat pertama kali dijalankan, sistem langsung menyiapkan data awal berupa beberapa barang antik yang otomatis dimasukkan ke dalam koleksi. Setelah itu, pengguna langsung dibawa ke menu utama yang berisi enam pilihan, yaitu tambah barang, tampilkan barang, perbarui barang, hapus barang, cari barang, dan keluar program.
@@ -70,52 +160,6 @@
 7. **Keluar dari program**
    
    Menu terakhir digunakan untuk menutup aplikasi. Sebelum benar-benar keluar, sistem meminta konfirmasi. Kalau pengguna mengetik “y”, program berhenti dengan ucapan terima kasih. Jika tidak, pengguna kembali ke menu utama.
----
-
-<h1 align="center">Penerapan MVC dan Struktur Packages Program</h1>
-
-1. Package model (Model)
-   
-    Package ini berisi class Model yang merepresentasikan data barang antik. Class ini memiliki beberapa properti seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan. Semua properti dibuat dengan access modifier private untuk menjaga prinsip enkapsulasi. Data diakses dan diubah melalui getter dan setter, serta diinisialisasi menggunakan konstruktor. Dengan adanya package ini, semua data barang antik tersimpan rapi dalam bentuk objek.
-
-2. Package service (Controller)
-
-    Package ini berisi class Service yang mengatur logika bisnis program. Semua operasi CRUD (Create, Read, Update, Delete) dijalankan di sini, termasuk juga fitur pencarian data dan validasi input. Controller ini menerima perintah dari View (Main), memprosesnya dengan memanfaatkan data dari Model, lalu mengembalikan hasilnya kembali ke View. Dengan cara ini, logika program terpusat di satu tempat dan tidak tercampur dengan tampilan.
-
-3. Package main (View)
-   
-    Package ini berisi class Main yang menjadi entry point program. Class ini berfungsi sebagai View, yaitu menampilkan menu utama kepada user dan menerima input pilihan. Setelah menerima input, class ini akan memanggil fungsi yang sesuai di Controller (Service). Karena hanya berfungsi sebagai antarmuka pengguna, class ini tidak diwajibkan memiliki properti maupun konstruktor.
-
----
-# Struktur Kelas
-
-  Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-masing. Kelas utama berada di Main.java yang berfungsi sebagai entry point program. Di dalam kelas ini terdapat menu interaktif yang digunakan pengguna untuk menambah, menampilkan,       memperbarui, menghapus, dan mencari data barang. Main juga menjadi penghubung langsung dengan kelas Service agar logika program dapat berjalan sesuai perintah pengguna.
-
-  Selanjutnya ada kelas Service.java yang berada di dalam package service. Kelas ini bertanggung jawab mengelola data barang, mulai dari penyimpanan, penambahan data baru, penghapusan, pencarian, hingga menampilkan seluruh data. Dengan kata lain, Service menjadi pusat logika bisnis program.
-
-  Untuk data inti, saya menggunakan package model. Di dalamnya terdapat kelas Barang sebagai superclass. Kelas Barang menyimpan semua properti umum, seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan. Semua atribut dibuat private dan diakses menggunakan getter dan setter, sehingga konsep encapsulation diterapkan.
-
-  Dari kelas Barang, saya membuat dua subclass, yaitu barangLelang dan barangWarisan. edua kelas ini mewarisi semua atribut yang ada di kelas Barang, tapi punya cara kerja khusus karena saya menggunakan method overriding pada method infoSingkat(). Artinya, saat objek BarangLelang dipanggil, program akan menambahkan keterangan “tipe: LELANG”, sedangkan jika objek BarangWarisan dipanggil, keterangan yang muncul adalah “tipe: WARISAN”. Bagian ini menunjukkan penerapan inheritance (pewarisan) dengan satu induk dan dua anak, sekaligus contoh polimorfisme karena satu method bisa memberikan hasil yang berbeda tergantung objeknya.
-
-# Penjelasan Overriding
-
-1. Method di Super Class (Barang)
-
-   <img width="546" height="109" alt="image" src="https://github.com/user-attachments/assets/cc08e63a-4e99-4d41-8144-7deb76c4344c" />
-
-     Method infoSingkat() didefinisikan dalam kelas Barang sebagai method default untuk menampilkan informasi barang. Isi yang ditampilkan meliputi id, nama, kategori, asal, dan sumber. Method ini akan dipanggil secara langsung ketika objek berasal dari kelas Barang tanpa perubahan tambahan.
-   
-2. Overriding di Subclass barangLelang
-
-   <img width="485" height="85" alt="image" src="https://github.com/user-attachments/assets/7b7f4335-57bc-4df1-9c4e-7886d30f67d9" />
-
-   Pada kelas BarangLelang, method infoSingkat() dioverride. Keyword @Override menunjukkan bahwa method ini menimpa method yang sama dari superclass. Bedanya, pada subclass ini ditambahkan dengan keterangan khusus "tipe: LELANG". Dengan begitu, saat objek BarangLelang dipanggil, hasil yang ditampilkan berbeda dari superclass.
-   
-3. Overriding di Subclass barangWarisan
-
-   <img width="493" height="101" alt="image" src="https://github.com/user-attachments/assets/3655f49a-f67a-4e64-becb-f648cbb85620" />
-
-   Hal serupa juga dilakukan di kelas BarangWarisan. Method infoSingkat() ditimpa (override) sehingga output memiliki tambahan "tipe: WARISAN". Perbedaan ini menunjukkan bahwa meskipun kedua subclass mewarisi atribut dan method dari kelas induk, masing-masing dapat menyesuaikan perilakunya sendiri.
    
 ---
 
