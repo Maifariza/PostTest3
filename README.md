@@ -50,15 +50,42 @@
 
 ---
 
-# Struktur Program
+<h1 align="center">Struktur Program</h1>
 
-  Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-masing. Kelas utama berada di Main.java yang berfungsi sebagai entry point program. Di dalam kelas ini terdapat menu interaktif yang digunakan pengguna untuk menambah, menampilkan,       memperbarui, menghapus, dan mencari data barang. Main juga menjadi penghubung langsung dengan kelas Service agar logika program dapat berjalan sesuai perintah pengguna.
+Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-masing.
 
-  Selanjutnya ada kelas Service.java yang berada di dalam package service. Kelas ini bertanggung jawab mengelola data barang, mulai dari penyimpanan, penambahan data baru, penghapusan, pencarian, hingga menampilkan seluruh data. Dengan kata lain, Service menjadi pusat logika bisnis program.
+ 1. Main.java
 
-  Untuk data inti, saya menggunakan package model. Di dalamnya terdapat kelas Barang sebagai superclass. Kelas Barang menyimpan semua properti umum, seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan. Semua atribut dibuat private dan diakses menggunakan getter dan setter, sehingga konsep encapsulation diterapkan.
+    <img width="884" height="781" alt="image" src="https://github.com/user-attachments/assets/bee6126e-1e87-47b4-a9c0-98c24bf7d428" />
 
-  Dari kelas Barang, saya membuat dua subclass, yaitu barangLelang dan barangWarisan. edua kelas ini mewarisi semua atribut yang ada di kelas Barang, tapi punya cara kerja khusus karena saya menggunakan method overriding pada method infoSingkat(). Artinya, saat objek BarangLelang dipanggil, program akan menambahkan keterangan “tipe: LELANG”, sedangkan jika objek BarangWarisan dipanggil, keterangan yang muncul adalah “tipe: WARISAN”. Bagian ini menunjukkan penerapan inheritance (pewarisan) dengan satu induk dan dua anak, sekaligus contoh polimorfisme karena satu method bisa memberikan hasil yang berbeda tergantung objeknya.
+    Kelas utama berada di Main.java yang berfungsi sebagai entry point program. Di dalam kelas ini terdapat menu interaktif yang digunakan pengguna untuk menambah, menampilkan,       memperbarui, menghapus, dan mencari data barang. Main juga menjadi penghubung langsung dengan kelas Service agar logika program dapat berjalan sesuai perintah pengguna.
+    
+ 2. Service.java
+
+    <img width="898" height="776" alt="image" src="https://github.com/user-attachments/assets/1b5ee6ad-eade-4cf9-b527-030031e069bc" />
+
+     Selanjutnya ada kelas Service.java yang berada di dalam package service. Kelas ini bertanggung jawab mengelola data barang, mulai dari penyimpanan, penambahan data baru, penghapusan, pencarian, hingga menampilkan seluruh data. Dengan kata lain, Service menjadi pusat logika bisnis program.
+
+ 3. Barang.java
+
+    <img width="890" height="835" alt="image" src="https://github.com/user-attachments/assets/dd39d5fd-9bd1-40a3-8d4c-f9c375420642" />
+
+    Untuk data inti, saya menggunakan package model. Di dalamnya terdapat kelas Barang sebagai superclass. Kelas Barang menyimpan semua properti umum, seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan. Semua atribut dibuat private dan diakses menggunakan getter dan setter, sehingga konsep encapsulation diterapkan.
+
+    Dari kelas Barang, saya membuat dua subclass, yaitu barangLelang dan barangWarisan. Kedua kelas ini mewarisi semua atribut yang ada di kelas Barang, tapi punya cara kerja khusus karena saya menggunakan method overriding pada method infoSingkat().
+
+    a. barangLelang.java
+
+    <img width="844" height="238" alt="image" src="https://github.com/user-attachments/assets/b9e21e51-9eff-483b-ad47-62ac99cd50f1" />
+
+     Saat objek barangLelang dipanggil, program akan menambahkan keterangan “tipe: LELANG”.
+
+    b. baranngWarisan.java
+
+    <img width="851" height="232" alt="image" src="https://github.com/user-attachments/assets/5ee49e4e-6bf5-406a-ba59-e074cf7199b5" />
+
+    sedangkan jika objek barangWarisan dipanggil, keterangan yang muncul adalah “tipe: WARISAN”.
+
   
 ---
 # Penjelasan Program
@@ -166,9 +193,10 @@
    
 ---
 
-<h1 align="center">Menu Utama AntikAesthetic</h1>
+<h1 align="center">⏳ Menu Utama AntikAesthetic ⏳</h1>
 
-<img width="468" height="203" alt="Screenshot 2025-09-09 130453" src="https://github.com/user-attachments/assets/d3f33513-9c4f-46f7-b978-f377ab2f1dfd" />
+<img width="776" height="289" alt="image" src="https://github.com/user-attachments/assets/02a777fb-04ed-43ee-86f5-5dc2a5298a12" />
+
 
 Pada awal program, pengguna akan langsung diarahkan ke Menu Utama AntikAesthetic. Menu ini berfungsi sebagai menu utama untuk mengakses seluruh fitur yang tersedia. Terdapat enam pilihan utama yang bisa dipilih sesuai kebutuhan.
 
