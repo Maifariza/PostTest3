@@ -107,13 +107,13 @@
    
 2. Overriding di Subclass barangLelang
 
-  <img width="485" height="85" alt="image" src="https://github.com/user-attachments/assets/7b7f4335-57bc-4df1-9c4e-7886d30f67d9" />
+   <img width="485" height="85" alt="image" src="https://github.com/user-attachments/assets/7b7f4335-57bc-4df1-9c4e-7886d30f67d9" />
 
-  Pada kelas BarangLelang, method infoSingkat() dioverride. Keyword @Override menunjukkan bahwa method ini menimpa method yang sama dari superclass. Bedanya, pada subclass ini ditambahkan dengan keterangan khusus "tipe: LELANG". Dengan begitu, saat objek BarangLelang dipanggil, hasil yang ditampilkan berbeda dari superclass.
+   Pada kelas BarangLelang, method infoSingkat() dioverride. Keyword @Override menunjukkan bahwa method ini menimpa method yang sama dari superclass. Bedanya, pada subclass ini ditambahkan dengan keterangan khusus "tipe: LELANG". Dengan begitu, saat objek BarangLelang dipanggil, hasil yang ditampilkan berbeda dari superclass.
    
 3. Overriding di Subclass barangWarisan
-   
-  <img width="493" height="101" alt="image" src="https://github.com/user-attachments/assets/3655f49a-f67a-4e64-becb-f648cbb85620" />
+
+   <img width="493" height="101" alt="image" src="https://github.com/user-attachments/assets/3655f49a-f67a-4e64-becb-f648cbb85620" />
 
    Hal serupa juga dilakukan di kelas BarangWarisan. Method infoSingkat() ditimpa (override) sehingga output memiliki tambahan "tipe: WARISAN". Perbedaan ini menunjukkan bahwa meskipun kedua subclass mewarisi atribut dan method dari kelas induk, masing-masing dapat menyesuaikan perilakunya sendiri.
    
