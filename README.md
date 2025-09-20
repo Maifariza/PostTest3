@@ -66,7 +66,7 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
 
      Selanjutnya ada kelas Service.java yang berada di dalam package service. Kelas ini bertanggung jawab mengelola data barang, mulai dari penyimpanan, penambahan data baru, penghapusan, pencarian, hingga menampilkan seluruh data. Dengan kata lain, Service menjadi pusat logika bisnis program.
 
- 3. Barang.java
+ 3. Model (Barang)
 
     <img width="890" height="835" alt="image" src="https://github.com/user-attachments/assets/dd39d5fd-9bd1-40a3-8d4c-f9c375420642" />
 
@@ -74,13 +74,13 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
 
     Dari kelas Barang, saya membuat dua subclass, yaitu barangLelang dan barangWarisan. Kedua kelas ini mewarisi semua atribut yang ada di kelas Barang, tapi punya cara kerja khusus karena saya menggunakan method overriding pada method infoSingkat().
 
-    a. barangLelang.java
+    a. Subclass barangLelang.java
 
     <img width="844" height="238" alt="image" src="https://github.com/user-attachments/assets/b9e21e51-9eff-483b-ad47-62ac99cd50f1" />
 
      Saat objek barangLelang dipanggil, program akan menambahkan keterangan “tipe: LELANG”.
 
-    b. baranngWarisan.java
+    b. Subclass baranngWarisan.java
 
     <img width="851" height="232" alt="image" src="https://github.com/user-attachments/assets/5ee49e4e-6bf5-406a-ba59-e074cf7199b5" />
 
