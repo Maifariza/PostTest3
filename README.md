@@ -312,21 +312,21 @@ Saat pengguna mencoba mengetik "iya" di kolom ID, program menolak input tersebut
 
 <img width="336" height="138" alt="Screenshot 2025-09-08 133604" src="https://github.com/user-attachments/assets/90911f05-750a-45dc-865a-bf06fb226e9f" />
 
-Ketika pengguna memilih menu 4, maka akan masuk ke fitur Hapus Barang. Di sini pengguna bisa menghapus data dengan memasukkan ID barang. Setelah ID diketik, sistem akan mengecek ketersediaannya. 
+etika pengguna mengetik angka 4 pada menu utama, sistem akan langsung mengarahkan ke fitur Hapus Barang. Pada tahap ini, program meminta pengguna untuk memasukkan ID barang yang ingin dihapus. ID ini berfungsi sebagai identitas unik setiap data, sehingga sistem tahu data mana yang dituju.
 
-Jika ID ditemukan, program menampilkan konfirmasi “Yakin hapus ID ... (y/n)?” .
+Setelah ID dimasukkan, sistem akan melakukan pengecekan apakah ID tersebut benar-benar ada di dalam daftar koleksi barang atau tidak. Jika ID ditemukan, sistem tidak akan langsung menghapus data barangnya, melainkan akan memberikan konfirmasi tambahan berupa pertanyaan "Yakin hapus ID... (y/n)?". Konfirmasi ini dibuat untuk menghindari kesalahan pengguna, misalnya jika tanpa sengaja salah mengetik ID.
 
 ### Jika Input "n"
 
 <img width="326" height="192" alt="Screenshot 2025-09-08 133622" src="https://github.com/user-attachments/assets/46f0c34a-7f09-476b-a2ca-face02704ecc" />
 
-Jika pengguna ketik n, Tidak ada data yang berubah dan pengguna bisa menekan Enter untuk kembali ke menu utama.
+Apabila pengguna mengetik n, artinya proses penghapusan dibatalkan. Program akan menampilkan pesan bahwa data tidak jadi dihapus, lalu pengguna diminta menekan Enter untuk kembali ke menu utama. Dengan begitu, data tetap aman dan tidak berubah sedikit pun.
 
 ### Jika Input "y"
 
 <img width="359" height="168" alt="Screenshot 2025-09-08 133649" src="https://github.com/user-attachments/assets/70f77aae-ba2d-493c-9a63-7b00666220d7" />
 
-Jika pengguna ketik y, maka akan muncul pesan bahwa data itu sudah dihapus.
+Sebaliknya, jika pengguna mengetik y, maka sistem akan benar-benar menghapus data dengan ID yang tadi dimasukkan. Setelah itu, muncul pesan bahwa data berhasil dihapus. Sama seperti sebelumnya, pengguna kemudian menekan Enter untuk kembali ke menu utama.
 
 ## **Validasi Input**
 
