@@ -451,6 +451,7 @@ Setelah itu, pengguna akan diminta kembali untuk memasukkan kata kunci yang vali
 
 # **Jika memilih opsi 6 maka akan diarahkan Keluar Program AntikAesthetic**
 
+Ketika menginputkan angka 6 pada menu utama, sistem akan keluar dari program. Sebelum keluar, program akan mengonfirmasi kembali sebelum kita benar-benar keluar. Kita akan ditanya "Apakah yakin kamu ingin keluar? (y/n)".
 
 ### Jika memilih "y"
 
@@ -462,7 +463,7 @@ Saat pengguna memilih menu 6 lalu mengetik y pada konfirmasi, maka program akan 
 
 <img width="469" height="283" alt="Screenshot 2025-09-09 130223" src="https://github.com/user-attachments/assets/7b4a8cb2-1fb8-4a97-a604-6ede66c4fb95" />
 
-Proses keluar dibatalkan. Program akan menampilkan pesan “<< Kembali ke menu utama AntikAesthetic >>” dan pengguna kembali ke menu utama.
+Proses keluar dibatalkan. Program akan menampilkan pesan “<< Kembali ke menu utama AntikAesthetic >>” dan pengguna akan kembali ke menu utama AntikAesthetic.
 
 ## **Validasi Input**
 
