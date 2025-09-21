@@ -62,13 +62,15 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
     
  2. Service.java
 
-    <img width="898" height="776" alt="image" src="https://github.com/user-attachments/assets/1b5ee6ad-eade-4cf9-b527-030031e069bc" />
+    <img width="864" height="865" alt="image" src="https://github.com/user-attachments/assets/b758be0e-8cfd-445a-92da-f980a556cad3" />
+
 
      Selanjutnya ada kelas Service.java yang berada di dalam package service. Kelas ini bertanggung jawab mengelola data barang, mulai dari penyimpanan, penambahan data baru, penghapusan, pencarian, hingga menampilkan seluruh data. Dengan kata lain, Service menjadi pusat logika bisnis program.
 
  3. Model (Barang)
 
-    <img width="890" height="835" alt="image" src="https://github.com/user-attachments/assets/dd39d5fd-9bd1-40a3-8d4c-f9c375420642" />
+    <img width="761" height="831" alt="image" src="https://github.com/user-attachments/assets/35815d4e-4a29-4168-ab7d-bd41e8e3ed03" />
+
 
     Untuk data inti, saya menggunakan package model. Di dalamnya terdapat kelas Barang sebagai superclass. Kelas Barang menyimpan semua properti umum, seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan. Semua atribut dibuat private dan diakses menggunakan getter dan setter, sehingga konsep encapsulation diterapkan.
 
@@ -318,6 +320,10 @@ Pesan ini berfungsi sebagai validasi agar pengguna mengetahui bahwa ID yang dima
 
 Saat pengguna mencoba mengetik "iya" di kolom ID, program menolak input tersebut dan menampilkan peringatan “Harus berupa angka".
 
+### Jika Inputan Kosong
+
+<img width="1295" height="755" alt="image" src="https://github.com/user-attachments/assets/6c26c745-501b-47c9-8881-5758f1750edd" />
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
  
 # **Jika memilih opsi 4 maka akan diarahkan ke Hapus Barang**
@@ -359,7 +365,8 @@ Jika ID tidak terdaftar, sistem menampilkan “Data dengan ID .. tidak ditemukan
 ### Jika Input ID selain angka
 
 
-<img width="334" height="183" alt="Screenshot 2025-09-08 134318" src="https://github.com/user-attachments/assets/c5db5fce-efd5-487f-a161-bdeacda6c84b" />
+<img width="407" height="140" alt="image" src="https://github.com/user-attachments/assets/3e0cab4e-187a-4b04-8df1-d67ae3adfa16" />
+
 
 Jika yang dimasukkan bukan berupa angka tapi huruf, sistem menolak dengan pesan “Harus berupa angka”. Setelah itu, tekan Enter untuk kembali ke menu utama.
 
