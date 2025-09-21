@@ -41,15 +41,15 @@
 
 1. Package model (Model)
    
-    Package ini berisi class Model yang merepresentasikan data barang antik. Class ini memiliki beberapa properti seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan. Semua properti dibuat dengan access modifier private untuk menjaga prinsip enkapsulasi. Data diakses dan diubah melalui getter dan setter, serta diinisialisasi menggunakan konstruktor. Dengan adanya package ini, semua data barang antik tersimpan rapi dalam bentuk objek.
+    > Package ini berisi class Model yang merepresentasikan data barang antik. Class ini memiliki beberapa properti seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan. Semua properti dibuat dengan access modifier private untuk menjaga prinsip enkapsulasi. Data diakses dan diubah melalui getter dan setter, serta diinisialisasi menggunakan konstruktor. Dengan adanya package ini, semua data barang antik tersimpan rapi dalam bentuk objek.
 
 2. Package service (Controller)
 
-    Package ini berisi class Service yang mengatur logika bisnis program. Semua operasi CRUD (Create, Read, Update, Delete) dijalankan di sini, termasuk juga fitur pencarian data dan validasi input. Controller ini menerima perintah dari View (Main), memprosesnya dengan memanfaatkan data dari Model, lalu mengembalikan hasilnya kembali ke View. Dengan cara ini, logika program terpusat di satu tempat dan tidak tercampur dengan tampilan.
+    > Package ini berisi class Service yang mengatur logika bisnis program. Semua operasi CRUD (Create, Read, Update, Delete) dijalankan di sini, termasuk juga fitur pencarian data dan validasi input. Controller ini menerima perintah dari View (Main), memprosesnya dengan memanfaatkan data dari Model, lalu mengembalikan hasilnya kembali ke View. Dengan cara ini, logika program terpusat di satu tempat dan tidak tercampur dengan tampilan.
 
 3. Package main (View)
    
-    Package ini berisi class Main yang menjadi entry point program. Class ini berfungsi sebagai View, yaitu menampilkan menu utama kepada user dan menerima input pilihan. Setelah menerima input, class ini akan memanggil fungsi yang sesuai di Controller (Service). Karena hanya berfungsi sebagai antarmuka pengguna, class ini tidak diwajibkan memiliki properti maupun konstruktor.
+    > Package ini berisi class Main yang menjadi entry point program. Class ini berfungsi sebagai View, yaitu menampilkan menu utama kepada user dan menerima input pilihan. Setelah menerima input, class ini akan memanggil fungsi yang sesuai di Controller (Service). Karena hanya berfungsi sebagai antarmuka pengguna, class ini tidak diwajibkan memiliki properti maupun konstruktor.
 
 ---
 
@@ -61,21 +61,20 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
 
     <img width="884" height="781" alt="image" src="https://github.com/user-attachments/assets/bee6126e-1e87-47b4-a9c0-98c24bf7d428" />
 
-    Kelas utama berada di Main.java yang berfungsi sebagai entry point program. Di dalam kelas ini terdapat menu interaktif yang digunakan pengguna untuk menambah, menampilkan,       memperbarui, menghapus, dan mencari data barang. Main juga menjadi penghubung langsung dengan kelas Service agar logika program dapat berjalan sesuai perintah pengguna.
+    > Kelas utama berada di Main.java yang berfungsi sebagai entry point program. Di dalam kelas ini terdapat menu interaktif yang digunakan pengguna untuk menambah, menampilkan,       memperbarui, menghapus, dan mencari data barang. Main juga menjadi penghubung langsung dengan kelas Service agar logika program dapat berjalan sesuai perintah pengguna.
     
  2. Service.java
 
     <img width="864" height="865" alt="image" src="https://github.com/user-attachments/assets/b758be0e-8cfd-445a-92da-f980a556cad3" />
 
-
-     Selanjutnya ada kelas Service.java yang berada di dalam package service. Kelas ini bertanggung jawab mengelola data barang, mulai dari penyimpanan, penambahan data baru, penghapusan, pencarian, hingga menampilkan seluruh data. Dengan kata lain, Service menjadi pusat logika bisnis program.
+    > Selanjutnya ada kelas Service.java yang berada di dalam package service. Kelas ini bertanggung jawab mengelola data barang, mulai dari penyimpanan, penambahan data baru, penghapusan, pencarian, hingga menampilkan seluruh data. Dengan kata lain, Service menjadi pusat logika bisnis program.
 
  3. Model (Barang)
 
     <img width="761" height="831" alt="image" src="https://github.com/user-attachments/assets/35815d4e-4a29-4168-ab7d-bd41e8e3ed03" />
 
 
-    Untuk data inti, saya menggunakan package model. Di dalamnya terdapat kelas Barang sebagai superclass. Kelas Barang menyimpan semua properti umum, seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan. Semua atribut dibuat private dan diakses menggunakan getter dan setter, sehingga konsep encapsulation diterapkan.
+    > Untuk data inti, saya menggunakan package model. Di dalamnya terdapat kelas Barang sebagai superclass. Kelas Barang menyimpan semua properti umum, seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan. Semua atribut dibuat private dan diakses menggunakan getter dan setter, sehingga konsep encapsulation diterapkan.
 
     Dari kelas Barang, saya membuat dua subclass, yaitu barangLelang dan barangWarisan. Kedua kelas ini mewarisi semua atribut yang ada di kelas Barang, tapi punya cara kerja khusus karena saya menggunakan method overriding pada method infoSingkat().
 
@@ -83,15 +82,15 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
 
     <img width="844" height="238" alt="image" src="https://github.com/user-attachments/assets/b9e21e51-9eff-483b-ad47-62ac99cd50f1" />
 
-     Pada kelas barangLelang, method infoSingkat() dioverride untuk menambahkan informasi tambahan berupa keterangan “tipe: LELANG”.
-
-    Dengan demikian, ketika objek dari kelas ini dipanggil, sistem tidak hanya menampilkan data dasar (seperti ID, nama, kategori, asal, dan sumber), tetapi juga memberikan penanda khusus bahwa barang tersebut berasal dari lelang. Hal ini membantu pengguna agar langsung mengetahui asal barang hanya dengan melihat ringkasan.
+     > Pada kelas barangLelang, method infoSingkat() dioverride untuk menambahkan informasi tambahan berupa keterangan “tipe: LELANG”.
+     
+     > Dengan demikian, ketika objek dari kelas ini dipanggil, sistem tidak hanya menampilkan data dasar (seperti ID, nama, kategori, asal, dan sumber), tetapi juga memberikan penanda khusus bahwa barang tersebut berasal dari lelang. Hal ini membantu pengguna agar langsung mengetahui asal barang hanya dengan melihat ringkasan.
     
     b. Subclass baranngWarisan.java
 
     <img width="851" height="232" alt="image" src="https://github.com/user-attachments/assets/5ee49e4e-6bf5-406a-ba59-e074cf7199b5" />
 
-    Sementara itu, pada kelas barangWarisan, method yang sama juga dioverride. Bedanya, hasil ringkasan akan menampilkan tambahan “tipe: WARISAN”. Artinya, meskipun atribut-atribut utama seperti nama, kategori, asal, dan sumber diwarisi dari superclass Barang, subclass ini mampu memberikan informasi lebih detail.
+    > Sementara itu, pada kelas barangWarisan, method yang sama juga dioverride. Bedanya, hasil ringkasan akan menampilkan tambahan “tipe: WARISAN”. Artinya, meskipun atribut-atribut utama seperti nama, kategori, asal, dan sumber diwarisi dari superclass Barang, subclass ini mampu memberikan informasi lebih detail.
 
   
 ---
@@ -231,7 +230,7 @@ Pada awal program, pengguna akan langsung diarahkan ke Menu Utama AntikAesthetic
 
 <img width="600" height="377" alt="image" src="https://github.com/user-attachments/assets/5c6f965b-67cd-466c-a238-47b529445c26" />
 
-Ketika pengguna menginputkan angka 1 pada menu utama maka akan diarahkan ke menu "Tambah Barang AntikAesthetic" seperti yang tertera pada gambar di atas ini.
+ Ketika pengguna menginputkan angka 1 pada menu utama maka akan diarahkan ke menu "Tambah Barang AntikAesthetic" seperti yang tertera pada gambar di atas ini.
 
 
 <img width="511" height="298" alt="image" src="https://github.com/user-attachments/assets/aa1a8488-abe5-4c84-ab4b-7b8d7d74c4f1" />
