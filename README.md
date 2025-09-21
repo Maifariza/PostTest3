@@ -218,12 +218,15 @@ Pada awal program, pengguna akan langsung diarahkan ke Menu Utama AntikAesthetic
 
 # **Jika memilih opsi 1 maka akan diarahkan ke Tambah Barang**
 
+<img width="600" height="377" alt="image" src="https://github.com/user-attachments/assets/5c6f965b-67cd-466c-a238-47b529445c26" />
+
+Ketika pengguna menginputkan angka 1 pada menu utama maka akan diarahkan ke menu "Tambah Barang AntikAesthetic" seperti yang tertera pada gambar di atas ini.
+
+
 <img width="511" height="298" alt="image" src="https://github.com/user-attachments/assets/aa1a8488-abe5-4c84-ab4b-7b8d7d74c4f1" />
 
 
-Ketika pengguna memilih opsi 1 pada menu utama, maka program akan diarahkan ke fitur Tambah Barang. Pada bagian ini, sistem meminta pengguna untuk mengisi informasi detail mengenai barang antik baru yang ingin ditambahkan ke dalam koleksi AntikAesthetic.
-
-Pada saat pengguna memilih opsi 1 (Tambah Barang), program akan menampilkan form input untuk menambahkan data barang antik baru ke dalam sistem.
+Lalu, program akan menampilkan form input untuk menambahkan data barang antik baru ke dalam sistem.
 
 Seperti pada gambar, user ingin menambah barang Patung Ganesha. Setelah itu, user diminta mengisi informasi lainnya secara berurutan, mulai dari kategori barang, asal, tahun pembuatan, material, kondisi barang, sumber perolehan, hingga harga perolehan.
 
@@ -240,7 +243,7 @@ Setelah semua data selesai diisi, sistem akan otomatis memberikan ID unik untuk 
 <img width="1297" height="689" alt="image" src="https://github.com/user-attachments/assets/82f5227c-8690-4b8f-b3ba-f64144f73549" />
 
 
-Lalu untuk melihat daftar koleksi yang telah ditambahkan, user ketik 2. Di bagian akhir, program menampilkan instruksi “Tekan Enter untuk melanjutkan…” agar pengguna bisa kembali ke menu utama dan melanjutkan ke fitur lain sesuai kebutuhan.
+Lalu untuk melihat daftar koleksi yang telah ditambahkan, user mengetik 2. Di bagian akhir, program menampilkan instruksi “Tekan Enter untuk melanjutkan…” agar pengguna bisa kembali ke menu utama dan melanjutkan ke fitur lain sesuai kebutuhan.
 
 ## **Validasi Input**
 
