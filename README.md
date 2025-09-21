@@ -194,10 +194,10 @@ Manfaat overriding terlihat ketika program menampilkan daftar barang atau hasil 
    
    Fitur ini memungkinkan pengguna mencari barang dengan kata kunci tertentu, baik berdasarkan nama, kategori, maupun asal barang. Jika kata kunci ditemukan pada salah satu barang, hasilnya akan ditampilkan dalam bentuk tabel. Selain itu, sistem juga menampilkan ringkasan hasil pencarian dengan tambahan informasi khusus, sehingga pengguna dapat lebih mudah memahami jenis barang yang ditemukan.
 
-Jika tidak ada barang yang sesuai, program akan menampilkan pesan bahwa tidak ada hasil yang cocok.
+   Jika tidak ada barang yang sesuai, program akan menampilkan pesan bahwa tidak ada hasil yang cocok.
    
 
-8. **Keluar dari program**
+7. **Keluar dari program**
    
    Menu terakhir digunakan untuk menutup aplikasi. Sebelum benar-benar keluar, sistem meminta konfirmasi. Kalau pengguna mengetik “y”, program berhenti dengan ucapan terima kasih. Jika tidak, pengguna kembali ke menu utama.
    
@@ -305,7 +305,7 @@ Lalu, sistem meminta pengguna untuk memasukkan ID dari barang yang ingin diperba
 
 Setelah ID dimasukkan, program akan menampilkan form dengan data lama sebagai referensi. Pengguna dapat mengosongkan input (menekan Enter) jika ingin mempertahankan nilai lama, atau mengetikkan data baru untuk mengganti informasi.
 
-Program akan menampilkan data lama seperti nama barang, kategori, asal, tahun pembuatan, material, kondisi, sumber perolehan, dan harga. Pengguna bisa mengubah salah satu atau beberapa data. Seperti pada gambar diatas, pengguna ingin memperbarui data pada barang dengan ID 1 (Vas Dinasti Ming). Namun, ia hanya ingin merubah data kondisi pada ID 1 saja yang tadinya kondisi "Rusak" menjadi "Baik". Setelah menekan Enter, program akan menyimpan perubahan tersebut dan menampilkan pesan “Data ID 1 berhasil diperbarui” yang menandakan bahwa perubahan data sudah berhasil dilakukan.
+Program akan menampilkan data lama seperti nama barang, kategori, asal, tahun pembuatan, material, kondisi, sumber perolehan, dan harga. Pengguna bisa mengubah salah satu atau beberapa data. Seperti pada gambar diatas, pengguna ingin memperbarui data pada barang dengan ID 1 (Vas Dinasti Ming). Namun, ia hanya ingin merubah data kondisi pada ID 1 saja yang tadinya kondisi "Baik" menjadi "Rusak". Setelah menekan Enter, program akan menyimpan perubahan tersebut dan menampilkan pesan “Data ID 1 berhasil diperbarui” yang menandakan bahwa perubahan data sudah berhasil dilakukan.
 
 ### Pengecekan Ulang
 
