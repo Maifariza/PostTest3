@@ -135,11 +135,15 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
 
 # Penjelasan Overriding
 
+Dalam program ini, konsep overriding digunakan agar sistem dapat menampilkan informasi barang secara lebih jelas dan sesuai dengan jenisnya. Secara sederhana, overriding berarti sebuah kelas turunan dapat menimpa atau mengganti perilaku method yang diwarisi dari kelas induk.
+
+Manfaat overriding terlihat ketika program menampilkan daftar barang atau hasil pencarian. Saat semua objek dipanggil menggunakan method yang sama, yaitu infoSingkat(), keluaran yang muncul akan otomatis menyesuaikan dengan kelas masing-masing. Barang biasa akan ditampilkan dengan informasi standar, sedangkan barang lelang dan barang warisan akan menampilkan keterangan tambahan sesuai tipenya.
+
 1. Method di Super Class (Barang)
 
    <img width="546" height="109" alt="image" src="https://github.com/user-attachments/assets/cc08e63a-4e99-4d41-8144-7deb76c4344c" />
 
-     Method infoSingkat() didefinisikan dalam kelas Barang sebagai method default untuk menampilkan informasi barang. Isi yang ditampilkan meliputi id, nama, kategori, asal, dan sumber. Method ini akan dipanggil secara langsung ketika objek berasal dari kelas Barang tanpa perubahan tambahan.
+     Pada kelas induk Barang, method infoSingkat() berfungsi untuk menampilkan informasi umum seperti ID, nama, kategori, asal, dan sumber barang. Method ini sudah cukup jika barang tersebut tidak memiliki keterangan khusus. Namun, disini saya gunakan untuk mengetahui barang yang berasal dari lelang atau warisan, agar informasi yang ditampilkan lebih spesifik.
    
 2. Overriding di Subclass barangLelang
 
@@ -387,27 +391,27 @@ Fitur ini dipakai untuk menemukan data dengan cepat. Cukup ketik kata kunci di k
 
 <img width="1155" height="321" alt="image" src="https://github.com/user-attachments/assets/0b2c5047-b4f0-461b-98dc-678f0d9b8d48" />
 
+Pada contoh di atas, pengguna melakukan pencarian dengan kata kunci “Jam Saku”. Sistem menampilkan data barang yang sesuai dalam bentuk tabel lengkap, meliputi ID, nama, kategori, asal, tahun, material, kondisi, sumber, dan harga. Setelah itu, sistem juga menampilkan ringkasan yang lebih sederhana.
 
-Pengguna ingin mencari barang berdasarkan nama. Pada kolom Kata kunci, pengguna mengetik “Jam Saku” lalu menekan Enter. Sistem kemudian menampilkan semua barang yang namanya mengandung kata tersebut.
+Nah, di bagian ringkasan inilah peran override terlihat. Method infoSingkat() yang ada pada masing-masing kelas barang dipanggil secara otomatis. Jika barang tersebut merupakan barang biasa, ringkasannya hanya menampilkan data standar seperti nama, kategori, asal, dan sumber. Namun, apabila barang berasal dari subclass seperti barangLelang atau barangWarisan, hasil ringkasannya akan menampilkan tambahan keterangan khusus, misalnya "tipe: LELANG" atau "tipe: WARISAN".
 
-Selain itu, akan ditampilkan mengenai ringkasan dari override.
+Hal ini membuat sistem lebih mudah digunakan, sebab informasi penting sudah ditampilkan tanpa perlu pengguna melakukan pengecekan manual.
 
 ### Cari Berdasarkan Kategori
 
 <img width="1144" height="348" alt="image" src="https://github.com/user-attachments/assets/a4bec835-f2a7-45d5-91d9-1f87291aa865" />
 
+Pada contoh pencarian berdasarkan kategori, pengguna mengetikkan kata kunci “Patung”. Sistem kemudian menampilkan semua barang yang termasuk dalam kategori tersebut. Informasi yang ditampilkan tidak hanya berupa tabel detail seperti ID, nama, asal, tahun, material, kondisi, sumber, dan harga, tetapi juga ringkasan singkat di bagian bawahnya.
 
-
-Pengguna ingin mencari berdasarkan kategori. Pada kolom Kata kunci, pengguna mengetik “Patung” lalu menekan Enter. Sistem akan menampilkan semua barang dengan kategori yang mengandung kata tersebut.
-
+Ringkasan ini memanfaatkan fitur override pada method infoSingkat(). Artinya, apabila objek tersebut berasal dari subclass seperti barangWarisan atau barangLelang, maka hasil ringkasannya akan ditambahkan keterangan tipe khusus, misalnya “tipe: WARISAN” atau “tipe: LELANG”. Dengan begitu, pengguna dapat langsung membedakan jenis perolehan barang tanpa perlu melihat detail tabel satu per satu.
 
 ### Cari Berdsarkan Asal
 
 <img width="1167" height="434" alt="image" src="https://github.com/user-attachments/assets/0d6161e0-2c5c-43cd-98fd-cd2b72234fa2" />
 
+Begitu pula pada pencarian berdasarkan asal. Misalnya, pengguna mengetik kata kunci “Jawa”. Sistem akan menampilkan semua barang yang memiliki asal dari daerah Jawa. Tabel utama memberikan informasi detail, sementara ringkasan di bawah tabel tetap memanfaatkan override untuk memperjelas tipe barang.
 
-
-Pengguna ingin mencari berdasarkan asal barang. Di kolom Kata kunci, pengguna mengetik “Jawa” lalu menekan Enter. Sistem akan menampilkan semua barang yang asalnya dari Jawa
+Dengan adanya ringkasan tersebut, pengguna tidak hanya melihat data mentah, tetapi juga langsung memperoleh gambaran singkat yang lebih mudah dipahami. Misalnya, “#15 Keris Pusaka (Senjata) | asal: Jawa | sumber: Lelang | tipe: LELANG”. Informasi tambahan ini membuat sistem lebih praktis digunakan, terutama saat jumlah data yang ditampilkan cukup banyak.
 
 ## **Validasi Input**
 
