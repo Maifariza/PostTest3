@@ -282,6 +282,9 @@ Misalnya, ketika pengguna menekan Enter tanpa mengetikkan nama barang, sistem ak
 
 Ketika pengguna memilih opsi 3 pada menu utama, maka program akan diarahkan ke fitur Update Barang.
 
+<img width="608" height="375" alt="image" src="https://github.com/user-attachments/assets/8403e627-b6ea-4a12-a71d-640c33f34931" />
+
+
 Pada bagian ini, sistem meminta pengguna untuk memasukkan ID dari barang yang ingin diperbarui. ID ini digunakan sebagai penanda unik setiap barang dalam koleksi.
 
 Setelah ID dimasukkan, program akan menampilkan form dengan data lama sebagai referensi. Pengguna dapat mengosongkan input (menekan Enter) jika ingin mempertahankan nilai lama, atau mengetikkan data baru untuk mengganti informasi.
@@ -290,7 +293,8 @@ Program akan menampilkan data lama seperti nama barang, kategori, asal, tahun pe
 
 ### Pengecekan Ulang
 
-<img width="1012" height="448" alt="Screenshot 2025-09-08 135110" src="https://github.com/user-attachments/assets/4fd7c124-d5a7-4b33-a555-667234657b95" />
+<img width="1057" height="517" alt="image" src="https://github.com/user-attachments/assets/965531cc-8cb4-417c-8cf0-92d5ff813f4e" />
+
 
 Setelah memperbarui data, pilih menu 2 (Tampilkan Semua Barang) untuk mengecek hasilnya. Daftar koleksi akan menampilkan informasi terbaru—termasuk perubahan pada nama, kategori, kondisi, dan kolom lainnya sehingga pengguna bisa memastikan update yang telah dilakukan sebelumnya sudah tersimpan dengan benar.
 
@@ -298,7 +302,7 @@ Setelah memperbarui data, pilih menu 2 (Tampilkan Semua Barang) untuk mengecek h
 
 ### Jika Input ID yang tidak terdaftar
 
-<img width="402" height="102" alt="Screenshot 2025-09-09 130728" src="https://github.com/user-attachments/assets/655ae614-a723-4fb4-ad74-ec7dc907345f" />
+<img width="1023" height="687" alt="image" src="https://github.com/user-attachments/assets/129d39d7-6b7d-4912-92a7-78627e0f3129" />
 
 Apabila pengguna memasukkan ID yang tidak ada di dalam koleksi, maka program akan memberikan pesan peringatan seperti pada gambar diatas. 
 
@@ -306,7 +310,8 @@ Pesan ini berfungsi sebagai validasi agar pengguna mengetahui bahwa ID yang dima
 
 ### Jika Input huruf
 
-<img width="465" height="284" alt="Screenshot 2025-09-09 130620" src="https://github.com/user-attachments/assets/1b0370d6-d9fb-42b0-a154-78e2f6df9f3e" />
+<img width="1021" height="680" alt="image" src="https://github.com/user-attachments/assets/c3e9e9bb-d86a-430b-9ca2-e378fdee1def" />
+
 
 Saat pengguna mencoba mengetik "iya" di kolom ID, program menolak input tersebut dan menampilkan peringatan “Harus berupa angka".
 
