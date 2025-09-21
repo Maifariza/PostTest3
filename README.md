@@ -382,36 +382,40 @@ Fitur ini dipakai untuk menemukan data dengan cepat. Cukup ketik kata kunci di k
 
 ### Cari Berdasarkan Nama Barang
 
-<img width="985" height="160" alt="Screenshot 2025-09-08 135635" src="https://github.com/user-attachments/assets/c4ed5f05-4cb8-4bc5-b222-006758a175b3" />
+<img width="1156" height="238" alt="image" src="https://github.com/user-attachments/assets/2330952f-5314-42f1-832b-9b17eb3dd702" />
 
-Pengguna ingin mencari barang berdasarkan nama. Pada kolom Kata kunci, pengguna mengetik “Gucci” lalu menekan Enter. Sistem kemudian menampilkan semua barang yang namanya mengandung kata tersebut.
+Pengguna ingin mencari barang berdasarkan nama. Pada kolom Kata kunci, pengguna mengetik “Jam Saku” lalu menekan Enter. Sistem kemudian menampilkan semua barang yang namanya mengandung kata tersebut.
 
 
 
 ### Cari Berdasarkan Kategori
 
-<img width="982" height="164" alt="Screenshot 2025-09-08 140013" src="https://github.com/user-attachments/assets/1bf6b9e3-8601-4e41-b86a-86120259a3b4" />
+<img width="1148" height="306" alt="image" src="https://github.com/user-attachments/assets/b6a1f8c5-ac92-42ff-9853-67b24a3ba666" />
+
 
 Pengguna ingin mencari berdasarkan kategori. Pada kolom Kata kunci, pengguna mengetik “Patung” lalu menekan Enter. Sistem akan menampilkan semua barang dengan kategori yang mengandung kata tersebut.
 
 
 ### Cari Berdsarkan Asal
 
-<img width="983" height="160" alt="Screenshot 2025-09-08 140157" src="https://github.com/user-attachments/assets/fd2e8cac-0609-4615-a806-3ff43b1d94de" />
+<img width="1252" height="304" alt="image" src="https://github.com/user-attachments/assets/e8487830-dd4b-4ab7-9fbe-b764f5c280c6" />
 
-Pengguna ingin mencari berdasarkan asal barang. Di kolom Kata kunci, pengguna mengetik “Jepang” lalu menekan Enter. Sistem akan menampilkan semua barang yang asalnya dari Jepang.
+
+Pengguna ingin mencari berdasarkan asal barang. Di kolom Kata kunci, pengguna mengetik “Jawa” lalu menekan Enter. Sistem akan menampilkan semua barang yang asalnya dari Jawa
 
 ## **Validasi Input**
 
 ### Input Kata Kunci yang tidak terdaftar
 
-<img width="388" height="119" alt="Screenshot 2025-09-08 140255" src="https://github.com/user-attachments/assets/c3013074-2505-4453-ab92-17a4e1cbfbc2" />
+<img width="588" height="162" alt="image" src="https://github.com/user-attachments/assets/5ef731a9-287d-4d20-a71d-da1a0da3b06d" />
+
 
 Jika pengguna mengetik kata kunci yang tidak cocok dengan data apa pun, sistem akan menampilkan pesan “Oops.. Tidak ada hasil untuk: ...”
 
 ### Inputan Kosong
 
-<img width="341" height="113" alt="Screenshot 2025-09-09 094143" src="https://github.com/user-attachments/assets/a0f53bdb-25e3-42ca-841c-effd5c0cdc83" />
+<img width="578" height="157" alt="image" src="https://github.com/user-attachments/assets/ede3fd20-64ed-47df-b22f-cde8efca027c" />
+
 
 Jika kolom Kata kunci dibiarkan kosong, sistem akan menolak dan menampilkan pesan “Input tidak boleh kosong”.
 
