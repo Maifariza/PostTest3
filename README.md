@@ -385,15 +385,17 @@ Fitur ini dipakai untuk menemukan data dengan cepat. Cukup ketik kata kunci di k
 
 ### Cari Berdasarkan Nama Barang
 
-<img width="1156" height="238" alt="image" src="https://github.com/user-attachments/assets/2330952f-5314-42f1-832b-9b17eb3dd702" />
+<img width="1155" height="321" alt="image" src="https://github.com/user-attachments/assets/0b2c5047-b4f0-461b-98dc-678f0d9b8d48" />
+
 
 Pengguna ingin mencari barang berdasarkan nama. Pada kolom Kata kunci, pengguna mengetik “Jam Saku” lalu menekan Enter. Sistem kemudian menampilkan semua barang yang namanya mengandung kata tersebut.
 
-
+Selain itu, akan ditampilkan mengenai ringkasan dari override.
 
 ### Cari Berdasarkan Kategori
 
-<img width="1148" height="306" alt="image" src="https://github.com/user-attachments/assets/b6a1f8c5-ac92-42ff-9853-67b24a3ba666" />
+<img width="1144" height="348" alt="image" src="https://github.com/user-attachments/assets/a4bec835-f2a7-45d5-91d9-1f87291aa865" />
+
 
 
 Pengguna ingin mencari berdasarkan kategori. Pada kolom Kata kunci, pengguna mengetik “Patung” lalu menekan Enter. Sistem akan menampilkan semua barang dengan kategori yang mengandung kata tersebut.
@@ -401,7 +403,8 @@ Pengguna ingin mencari berdasarkan kategori. Pada kolom Kata kunci, pengguna men
 
 ### Cari Berdsarkan Asal
 
-<img width="1252" height="304" alt="image" src="https://github.com/user-attachments/assets/e8487830-dd4b-4ab7-9fbe-b764f5c280c6" />
+<img width="1167" height="434" alt="image" src="https://github.com/user-attachments/assets/0d6161e0-2c5c-43cd-98fd-cd2b72234fa2" />
+
 
 
 Pengguna ingin mencari berdasarkan asal barang. Di kolom Kata kunci, pengguna mengetik “Jawa” lalu menekan Enter. Sistem akan menampilkan semua barang yang asalnya dari Jawa
