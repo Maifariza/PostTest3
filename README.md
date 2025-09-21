@@ -216,7 +216,8 @@ Pada awal program, pengguna akan langsung diarahkan ke Menu Utama AntikAesthetic
 
 # **Jika memilih opsi 1 maka akan diarahkan ke Tambah Barang**
 
-<img width="543" height="218" alt="Screenshot 2025-09-08 133146" src="https://github.com/user-attachments/assets/3c28606b-1806-4aa2-a829-413c76e1bfce" />
+<img width="511" height="298" alt="image" src="https://github.com/user-attachments/assets/aa1a8488-abe5-4c84-ab4b-7b8d7d74c4f1" />
+
 
 Ketika pengguna memilih opsi 1 pada menu utama, maka program akan diarahkan ke fitur Tambah Barang. Pada bagian ini, sistem meminta pengguna untuk mengisi informasi detail mengenai barang antik baru yang ingin ditambahkan ke dalam koleksi AntikAesthetic.
 
@@ -227,13 +228,15 @@ Seperti pada gambar, user ingin menambah barang Patung Ganesha. Setelah itu, use
 
 ### Pemberitahuan Jika Berhasil
 
-<img width="336" height="47" alt="Screenshot 2025-09-08 133343" src="https://github.com/user-attachments/assets/bf6b9c29-6fe7-4225-842f-4d8fcfea9c58" />
+<img width="464" height="54" alt="image" src="https://github.com/user-attachments/assets/408ffe7a-4b6d-4956-aac9-fba391e5e2f2" />
+
 
 Setelah semua data selesai diisi, sistem akan otomatis memberikan ID unik untuk barang baru tersebut dan menambahkannya ke dalam koleksi. 
 
 ### Pengecekan Ulang
 
-<img width="1007" height="546" alt="Screenshot 2025-09-08 133435" src="https://github.com/user-attachments/assets/0ea1f0c7-7433-4deb-96a7-1b9fb458d17d" />
+<img width="1297" height="689" alt="image" src="https://github.com/user-attachments/assets/82f5227c-8690-4b8f-b3ba-f64144f73549" />
+
 
 Lalu untuk melihat daftar koleksi yang telah ditambahkan, user ketik 2. Di bagian akhir, program menampilkan instruksi “Tekan Enter untuk melanjutkan…” agar pengguna bisa kembali ke menu utama dan melanjutkan ke fitur lain sesuai kebutuhan.
 
@@ -259,7 +262,8 @@ Misalnya, ketika pengguna menekan Enter tanpa mengetikkan nama barang, sistem ak
 
 # **Jika memilih opsi 2 maka akan diarahkan ke Tampilkan Barang**
 
-<img width="1266" height="583" alt="Screenshot 2025-09-08 125848" src="https://github.com/user-attachments/assets/91e9b339-ada3-40bd-9990-b05a013449d8" />
+<img width="1279" height="629" alt="image" src="https://github.com/user-attachments/assets/baebb6d6-729f-4a91-a8e5-9ddef25e8309" />
+
 
   Jika pengguna memilih opsi 2 pada menu utama, maka program akan diarahkan ke fitur Tampilkan Semua Barang. Pada bagian ini, sistem akan menampilkan seluruh koleksi barang dari AntikAesthetic yang sudah tersimpan dalam database program. Data ditampilkan dalam bentuk tabel agar lebih terstruktur dan mudah dipahami.
 
