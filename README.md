@@ -419,8 +419,20 @@ Program menampilkan pesan “<< Kembali ke menu utama AntikAesthetic >>” lalu 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# **Jika user input selain opsi 1-6**
+# **Jika user input selain opsi 1-6. Menginputkan menu menggunakan huruf dan mengosongkan inputan**
+
+**Menginputkan Huruf**
+
+<img width="729" height="332" alt="image" src="https://github.com/user-attachments/assets/e88a4486-3e27-4b5a-b503-c91fade6e99b" />
+
+Apabila pengguna tidak mengetikkan angka 1–6, tetapi justru memasukkan huruf (misalnya hai atau abc), sistem akan langsung menganggap input tersebut tidak valid. Hal ini karena program hanya dirancang untuk menerima input berupa angka sesuai opsi yang tersedia pada menu utama.
+
+Setelah mendeteksi input huruf, program akan menampilkan pesan “Pilihan tidak valid.”. Pesan ini dimaksudkan sebagai peringatan agar pengguna tahu bahwa yang dimasukkan tidak sesuai format yang benar. Setelah itu, program meminta pengguna menekan tombol Enter untuk kembali, lalu menampilkan kembali menu utama. 
+
+Pengguna juga diarahkan untuk memperbaiki kesalahannya dan memasukkan angka yang sesuai dengan daftar pilihan menu.
+
+**Mengosongkan Inputan**
 
 <img width="457" height="254" alt="Screenshot 2025-09-09 125912" src="https://github.com/user-attachments/assets/67ec9884-670c-462b-8dd6-cbb210c67051" />
 
-Menu utama hanya menerima angka 1–6.
+Jika pengguna tidak mengetikkan apa pun (input kosong) lalu langsung menekan Enter pada saat diminta memilih menu, maka sistem akan membaca input tersebut sebagai tidak valid. Dalam kondisi ini, program tidak akan mengeksekusi perintah apa pun, melainkan langsung menampilkan pesan peringatan dan membawa pengguna kembali ke menu utama. Dengan begitu, alur program tetap aman, tidak terjadi error, dan pengguna diberi kesempatan untuk memilih ulang opsi yang benar.
