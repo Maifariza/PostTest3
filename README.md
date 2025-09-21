@@ -244,7 +244,8 @@ Lalu untuk melihat daftar koleksi yang telah ditambahkan, user ketik 2. Di bagia
 
 ### Jika Inputan tahun tidak di antara 0 - 3000
 
-<img width="427" height="147" alt="image" src="https://github.com/user-attachments/assets/ebe9b2cd-cf44-43ca-8d08-f4a26d90b381" />
+<img width="605" height="203" alt="image" src="https://github.com/user-attachments/assets/1d927882-98ae-4606-9a3e-fbc24066c114" />
+
 
 Ketika pengguna mengisi data barang baru, setiap input akan dicek dulu apakah sesuai dengan aturan yang berlaku. Pada contoh di atas, pengguna mencoba memasukkan tahun pembuatan dengan nilai -200. Karena sistem sudah diberi aturan bahwa tahun harus berada dalam rentang 0 sampai 3000, maka input tersebut dianggap tidak valid.
 
@@ -252,7 +253,8 @@ Program kemudian langsung menampilkan pesan peringatan “Harus di antara 0 dan 
 
 ### Jika Inputan Kosng
 
-<img width="292" height="97" alt="Screenshot 2025-09-08 162201" src="https://github.com/user-attachments/assets/9363c488-0979-4736-81bd-35b5cea66035" />
+<img width="580" height="138" alt="image" src="https://github.com/user-attachments/assets/f809256c-c79d-4924-8416-1741cc1e6b36" />
+
 
 Apabila pengguna mencoba menambahkan barang baru namun tidak mengisi data pada kolom yang diminta, maka program akan menampilkan pesan peringatan. 
 
@@ -278,14 +280,15 @@ Misalnya, ketika pengguna menekan Enter tanpa mengetikkan nama barang, sistem ak
 # **Jika memilih opsi 3 maka akan diarahkan ke Update Barang**
 
 
-<img width="552" height="311" alt="Screenshot 2025-09-08 134932" src="https://github.com/user-attachments/assets/e332eafe-cdc4-4199-9ef0-b3d102827924" />
+<img width="1319" height="720" alt="image" src="https://github.com/user-attachments/assets/51aa6c1e-336f-4fab-83c3-0beef394cd9c" />
 
-Ketika pengguna memilih opsi 3 pada menu utama, maka program akan diarahkan ke fitur Update Barang.
+
+Ketika pengguna memilih opsi 3 pada menu utama, maka program akan diarahkan ke fitur Update Barang. Ketika program di jalankan, akan ditampilkan terlebih dahulu daftar barang yang ada di Antikaethetic agar bisa melihan pada ID berapa barang ingin di Update.
 
 <img width="608" height="375" alt="image" src="https://github.com/user-attachments/assets/8403e627-b6ea-4a12-a71d-640c33f34931" />
 
 
-Pada bagian ini, sistem meminta pengguna untuk memasukkan ID dari barang yang ingin diperbarui. ID ini digunakan sebagai penanda unik setiap barang dalam koleksi.
+Lalu, sistem meminta pengguna untuk memasukkan ID dari barang yang ingin diperbarui. ID ini digunakan sebagai penanda unik setiap barang dalam koleksi.
 
 Setelah ID dimasukkan, program akan menampilkan form dengan data lama sebagai referensi. Pengguna dapat mengosongkan input (menekan Enter) jika ingin mempertahankan nilai lama, atau mengetikkan data baru untuk mengganti informasi.
 
@@ -319,21 +322,28 @@ Saat pengguna mencoba mengetik "iya" di kolom ID, program menolak input tersebut
  
 # **Jika memilih opsi 4 maka akan diarahkan ke Hapus Barang**
 
-<img width="336" height="138" alt="Screenshot 2025-09-08 133604" src="https://github.com/user-attachments/assets/90911f05-750a-45dc-865a-bf06fb226e9f" />
+<img width="1269" height="729" alt="image" src="https://github.com/user-attachments/assets/d80d2100-c4d4-493d-b14f-b5af4682ec76" />
 
-etika pengguna mengetik angka 4 pada menu utama, sistem akan langsung mengarahkan ke fitur Hapus Barang. Pada tahap ini, program meminta pengguna untuk memasukkan ID barang yang ingin dihapus. ID ini berfungsi sebagai identitas unik setiap data, sehingga sistem tahu data mana yang dituju.
+Ketika pengguna memilih opsi 4 pada menu utama, maka program akan diarahkan ke fitur Hapus Barang. Ketika program di jalankan, akan ditampilkan terlebih dahulu daftar barang yang ada di Antikaethetic agar bisa melihan pada ID berapa barang ingin dihapus.
+
+<img width="319" height="81" alt="image" src="https://github.com/user-attachments/assets/43875892-1e22-43b7-b704-2e3e6f03f3b7" />
+
+
+Ketika pengguna mengetik angka 4 pada menu utama, sistem akan langsung mengarahkan ke fitur Hapus Barang. Pada tahap ini, program meminta pengguna untuk memasukkan ID barang yang ingin dihapus. ID ini berfungsi sebagai identitas unik setiap data, sehingga sistem tahu data mana yang dituju.
 
 Setelah ID dimasukkan, sistem akan melakukan pengecekan apakah ID tersebut benar-benar ada di dalam daftar koleksi barang atau tidak. Jika ID ditemukan, sistem tidak akan langsung menghapus data barangnya, melainkan akan memberikan konfirmasi tambahan berupa pertanyaan "Yakin hapus ID... (y/n)?". Konfirmasi ini dibuat untuk menghindari kesalahan pengguna, misalnya jika tanpa sengaja salah mengetik ID.
 
 ### Jika Input "n"
 
-<img width="326" height="192" alt="Screenshot 2025-09-08 133622" src="https://github.com/user-attachments/assets/46f0c34a-7f09-476b-a2ca-face02704ecc" />
+<img width="312" height="128" alt="image" src="https://github.com/user-attachments/assets/f20f63cd-adfe-4293-814f-7195a45339f2" />
+
 
 Apabila pengguna mengetik n, artinya proses penghapusan dibatalkan. Program akan menampilkan pesan bahwa data tidak jadi dihapus, lalu pengguna diminta menekan Enter untuk kembali ke menu utama. Dengan begitu, data tetap aman dan tidak berubah sedikit pun.
 
 ### Jika Input "y"
 
-<img width="359" height="168" alt="Screenshot 2025-09-08 133649" src="https://github.com/user-attachments/assets/70f77aae-ba2d-493c-9a63-7b00666220d7" />
+<img width="433" height="129" alt="image" src="https://github.com/user-attachments/assets/2b2cbd6b-7c20-47bc-9008-ac91741a885a" />
+
 
 Sebaliknya, jika pengguna mengetik y, maka sistem akan benar-benar menghapus data dengan ID yang tadi dimasukkan. Setelah itu, muncul pesan bahwa data berhasil dihapus. Sama seperti sebelumnya, pengguna kemudian menekan Enter untuk kembali ke menu utama.
 
@@ -341,7 +351,8 @@ Sebaliknya, jika pengguna mengetik y, maka sistem akan benar-benar menghapus dat
 
 ### Jika Input ID yang tidak terdaftar
 
-<img width="329" height="130" alt="Screenshot 2025-09-08 133959" src="https://github.com/user-attachments/assets/280c8281-eecf-4156-ba4f-b9b1d97c000b" />
+<img width="373" height="110" alt="image" src="https://github.com/user-attachments/assets/0de4c638-2bb7-4415-ab85-288858d2abbc" />
+
 
 Jika ID tidak terdaftar, sistem menampilkan “Data dengan ID .. tidak ditemukan.”. 
 
