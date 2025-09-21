@@ -18,7 +18,8 @@
  
 ### **SISTEM MANAJEMEN KOLEKSI BARANG ANTIK**
 
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/9a613d92-be79-4aa4-b9b5-0c21f5886ee4" />
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/501113d3-1765-4611-b6ad-9f4ac9268223" />
+
 
   <h1 align="center">AntikAesthetic 🔎⏳</h1>
     
