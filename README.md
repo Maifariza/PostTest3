@@ -80,17 +80,20 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
 
     <img width="844" height="238" alt="image" src="https://github.com/user-attachments/assets/b9e21e51-9eff-483b-ad47-62ac99cd50f1" />
 
-     Saat objek barangLelang dipanggil, program akan menambahkan keterangan “tipe: LELANG”.
+     Pada kelas barangLelang, method infoSingkat() dioverride untuk menambahkan informasi tambahan berupa keterangan “tipe: LELANG”.
 
+    Dengan demikian, ketika objek dari kelas ini dipanggil, sistem tidak hanya menampilkan data dasar (seperti ID, nama, kategori, asal, dan sumber), tetapi juga memberikan penanda khusus bahwa barang tersebut berasal dari lelang. Hal ini membantu pengguna agar langsung mengetahui asal barang hanya dengan melihat ringkasan.
+    
     b. Subclass baranngWarisan.java
 
     <img width="851" height="232" alt="image" src="https://github.com/user-attachments/assets/5ee49e4e-6bf5-406a-ba59-e074cf7199b5" />
 
-    sedangkan jika objek barangWarisan dipanggil, keterangan yang muncul adalah “tipe: WARISAN”.
+    Sementara itu, pada kelas barangWarisan, method yang sama juga dioverride. Bedanya, hasil ringkasan akan menampilkan tambahan “tipe: WARISAN”. Artinya, meskipun atribut-atribut utama seperti nama, kategori, asal, dan sumber diwarisi dari superclass Barang, subclass ini mampu memberikan informasi lebih detail.
 
   
 ---
-# Penjelasan Program
+
+<h1 align="center">Penjelasan Program</h1>
 
 1. Encapsulation (Getter dan Setter)
 
@@ -108,32 +111,30 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
 
 2. Inheritance
 
-   a. Superclass Barang
+   **a. Superclass Barang**
 
       <img width="302" height="220" alt="image" src="https://github.com/user-attachments/assets/bc702751-1b07-4461-8873-70d7208efe00" />
 
-      Kelas Barang adalah superclass atau kelas induk. Di kelas ini didefinisikan semua atribut umum yang dimiliki setiap barang, misalnya id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan.
+      Pada program ini, Barang adalah superclass. Di dalamnya sudah ada atribut umum seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan. Juga ada method infoSingkat() yang menampilkan data inti barang.
 
-      Selain atribut, kelas Barang juga memiliki method infoSingkat() yang berfungsi untuk menampilkan data inti barang. Karena sifatnya umum, semua subclass bisa langsung mewarisi atribut maupun method yang ada di Barang tanpa perlu menuliskannya lagi. Dengan begitu, Barang menjadi pondasi utama yang menyediakan struktur dasar bagi objek-objek turunan.
-
-   b. Subclass barangLelang
+   **b. Subclass barangLelang**
    
    <img width="797" height="91" alt="image" src="https://github.com/user-attachments/assets/70262dc2-52d3-444b-b156-ad38d36e5468" />
-   
-   Kelas BarangLelang adalah turunan dari Barang. Karena mewarisi semua atribut dari kelas induk, BarangLelang otomatis punya id, nama, kategori, hingga infoSingkat().
-   
-   Bedanya, di kelas ini method infoSingkat() ditimpa (override). Hasilnya, setiap kali objek BarangLelang dipanggil, output akan menambahkan label khusus "tipe: LELANG". Dengan begitu, meskipun struktur datanya sama dengan Barang, objek lelang bisa dibedakan lewat tampilan informasinya.
 
-   c. Subclass barangWarisan
+    Kelas barangLelang adalah subclass yang dibuat dengan kata kunci extends Barang. Artinya, kelas ini otomatis memiliki semua atribut dan method yang ada di kelas Barang tanpa perlu menuliskannya kembali.
+   
+   Artinya, barangLelang tidak perlu menuliskan ulang properti dasar tersebut karena sudah didapat dari kelas induk.
+
+   **c. Subclass barangWarisan**
    
    <img width="790" height="97" alt="image" src="https://github.com/user-attachments/assets/7dcba63a-9c14-49de-bf6d-9cd574d74c46" />
 
-   Kelas BarangWarisan juga merupakan turunan dari Barang. Sama seperti BarangLelang, ia mewarisi seluruh atribut dan method dari kelas induk.
+   Kelas barangWarisan adalah subclass yang dibuat dengan kata kunci extends Barang. Artinya, kelas ini otomatis memiliki semua atribut dan method yang ada di kelas Barang tanpa perlu menuliskannya kembali.
+   
+   Artinya, barangWarisan tidak perlu menuliskan ulang properti dasar tersebut karena sudah didapat dari kelas induk.
 
-   Di dalamnya, method infoSingkat() juga dioverride, tetapi dengan tambahan label "tipe: WARISAN". Jadi, ketika objek BarangWarisan dipanggil, output akan menampilkan keterangan berbeda, menegaskan bahwa barang tersebut berasal dari warisan.
 
-
-# Penjelasan Overriding
+<h1 align="center">Penjelasan Overriding</h1>
 
 Dalam program ini, konsep overriding digunakan agar sistem dapat menampilkan informasi barang secara lebih jelas dan sesuai dengan jenisnya. Secara sederhana, overriding berarti sebuah kelas turunan dapat menimpa atau mengganti perilaku method yang diwarisi dari kelas induk.
 
@@ -149,13 +150,15 @@ Manfaat overriding terlihat ketika program menampilkan daftar barang atau hasil 
 
    <img width="485" height="85" alt="image" src="https://github.com/user-attachments/assets/7b7f4335-57bc-4df1-9c4e-7886d30f67d9" />
 
-   Pada kelas BarangLelang, method infoSingkat() dioverride. Keyword @Override menunjukkan bahwa method ini menimpa method yang sama dari superclass. Bedanya, pada subclass ini ditambahkan dengan keterangan khusus "tipe: LELANG". Dengan begitu, saat objek BarangLelang dipanggil, hasil yang ditampilkan berbeda dari superclass.
+   Pada kelas barangLelang, method infoSingkat() ditulis ulang (override) dari method yang ada di superclass Barang. Karena kelas ini mewarisi semua atribut dan method dari Barang melalui inheritance, kita tidak perlu menuliskan ulang properti seperti id, nama, kategori, atau asal.
+
+   Namun, agar informasi lebih spesifik, subclass ini menambahkan keterangan tambahan berupa “tipe: LELANG”. Artinya, meskipun dasarnya sama dengan Barang, ketika objek barangLelang dipanggil, hasil yang muncul akan lebih detail dan menunjukkan bahwa barang tersebut diperoleh dari lelang.
    
-3. Overriding di Subclass barangWarisan
+4. Overriding di Subclass barangWarisan
 
    <img width="493" height="101" alt="image" src="https://github.com/user-attachments/assets/3655f49a-f67a-4e64-becb-f648cbb85620" />
 
-   Hal serupa juga dilakukan di kelas BarangWarisan. Method infoSingkat() ditimpa (override) sehingga output memiliki tambahan "tipe: WARISAN". Perbedaan ini menunjukkan bahwa meskipun kedua subclass mewarisi atribut dan method dari kelas induk, masing-masing dapat menyesuaikan perilakunya sendiri.
+   Hal yang sama juga berlaku pada kelas barangWarisan. Kelas ini mewarisi seluruh atribut dan method dari kelas Barang, lalu melakukan override pada method infoSingkat(). Bedanya, output yang ditampilkan akan menambahkan label “tipe: WARISAN”.
 
 ---
 
@@ -189,11 +192,12 @@ Manfaat overriding terlihat ketika program menampilkan daftar barang atau hasil 
 
 6. **Mencari barang**
    
-   Fitur ini memungkinkan pengguna mencari barang dengan kata kunci tertentu, baik berdasarkan nama, kategori, atau asal barang. Jika kata kunci ditemukan pada salah satu barang, hasilnya ditampilkan dalam tabel.
+   Fitur ini memungkinkan pengguna mencari barang dengan kata kunci tertentu, baik berdasarkan nama, kategori, maupun asal barang. Jika kata kunci ditemukan pada salah satu barang, hasilnya akan ditampilkan dalam bentuk tabel. Selain itu, sistem juga menampilkan ringkasan hasil pencarian dengan tambahan informasi khusus, sehingga pengguna dapat lebih mudah memahami jenis barang yang ditemukan.
 
-   Jika tidak ada yang cocok, program menampilkan pesan bahwa tidak ada hasil yang sesuai.
+Jika tidak ada barang yang sesuai, program akan menampilkan pesan bahwa tidak ada hasil yang cocok.
+   
 
-7. **Keluar dari program**
+8. **Keluar dari program**
    
    Menu terakhir digunakan untuk menutup aplikasi. Sebelum benar-benar keluar, sistem meminta konfirmasi. Kalau pengguna mengetik “y”, program berhenti dengan ucapan terima kasih. Jika tidak, pengguna kembali ke menu utama.
    
@@ -395,7 +399,7 @@ Pada contoh di atas, pengguna melakukan pencarian dengan kata kunci “Jam Saku�
 
 Nah, di bagian ringkasan inilah peran override terlihat. Method infoSingkat() yang ada pada masing-masing kelas barang dipanggil secara otomatis. Jika barang tersebut merupakan barang biasa, ringkasannya hanya menampilkan data standar seperti nama, kategori, asal, dan sumber. Namun, apabila barang berasal dari subclass seperti barangLelang atau barangWarisan, hasil ringkasannya akan menampilkan tambahan keterangan khusus, misalnya "tipe: LELANG" atau "tipe: WARISAN".
 
-Hal ini membuat sistem lebih mudah digunakan, sebab informasi penting sudah ditampilkan tanpa perlu pengguna melakukan pengecekan manual.
+Hal ini membuat sistem lebih mudah digunakan, sebab jika pengguna ingin mengetahui mana barang warisan dan mana yang barang lelang, informasi penting sudah ditampilkan tanpa perlu melakukan pengecekan manual.
 
 ### Cari Berdasarkan Kategori
 
