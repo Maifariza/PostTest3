@@ -18,6 +18,8 @@
  
 ### **SISTEM MANAJEMEN KOLEKSI BARANG ANTIK**
 
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/9a613d92-be79-4aa4-b9b5-0c21f5886ee4" />
+
   <h1 align="center">AntikAesthetic 🔎⏳</h1>
     
  -------------------------------------------------------------------------
@@ -312,7 +314,7 @@ Program akan menampilkan data lama seperti nama barang, kategori, asal, tahun pe
 <img width="1057" height="517" alt="image" src="https://github.com/user-attachments/assets/965531cc-8cb4-417c-8cf0-92d5ff813f4e" />
 
 
-Setelah memperbarui data, pilih menu 2 (Tampilkan Semua Barang) untuk mengecek hasilnya. Daftar koleksi akan menampilkan informasi terbaru—termasuk perubahan pada nama, kategori, kondisi, dan kolom lainnya sehingga pengguna bisa memastikan update yang telah dilakukan sebelumnya sudah tersimpan dengan benar.
+Setelah memperbarui data, pilih menu 2 (Tampilkan Semua Barang) untuk mengecek hasilnya. Daftar koleksi akan menampilkan informasi terbaru termasuk perubahan pada nama, kategori, kondisi, dan kolom lainnya sehingga pengguna bisa memastikan update yang telah dilakukan sebelumnya sudah tersimpan dengan benar.
 
 ## **Validasi Input**
 
@@ -320,20 +322,23 @@ Setelah memperbarui data, pilih menu 2 (Tampilkan Semua Barang) untuk mengecek h
 
 <img width="1023" height="687" alt="image" src="https://github.com/user-attachments/assets/129d39d7-6b7d-4912-92a7-78627e0f3129" />
 
-Apabila pengguna memasukkan ID yang tidak ada di dalam koleksi, maka program akan memberikan pesan peringatan seperti pada gambar diatas. 
+Apabila pengguna memasukkan sebuah ID yang tidak ada dalam koleksi, sistem akan langsung memberikan pesan peringatan berupa "ID tidak ditemukan". Pesan ini muncul untuk memberi tahu pengguna bahwa ID yang dimasukkan tidak sesuai dengan data yang tersedia di dalam tabel.
 
-Pesan ini berfungsi sebagai validasi agar pengguna mengetahui bahwa ID yang dimasukkan salah atau tidak tersedia.
+Pengguna mencoba memperbarui barang dengan ID "21", sementara koleksi hanya berisi ID dari 1 sampai 20, maka sistem menolak perintah tersebut. Dengan begitu, tidak ada risiko pengguna tanpa sengaja memperbarui atau menghapus data yang sebenarnya tidak ada.
 
 ### Jika Input huruf
 
 <img width="1021" height="680" alt="image" src="https://github.com/user-attachments/assets/c3e9e9bb-d86a-430b-9ca2-e378fdee1def" />
 
+Pada tahap ini, sistem dilengkapi dengan validasi agar hanya angka yang dapat diterima pada kolom ID. Jika pengguna secara tidak sengaja atau sengaja memasukkan teks berupa huruf, seperti contoh "iya", maka sistem akan langsung menolak input tersebut.
 
-Saat pengguna mencoba mengetik "iya" di kolom ID, program menolak input tersebut dan menampilkan peringatan “Harus berupa angka".
+Program kemudian memberikan pesan peringatan "Harus berupa angka" untuk mengingatkan pengguna bahwa input ID hanya bisa berupa angka.
 
 ### Jika Inputan Kosong
 
 <img width="1295" height="755" alt="image" src="https://github.com/user-attachments/assets/6c26c745-501b-47c9-8881-5758f1750edd" />
+
+Apabila pengguna menekan Enter tanpa mengetikkan angka apapun pada kolom ID, sistem akan langsung menampilkan pesan "ID tidak ditemukan". Hal ini terjadi karena input yang kosong dianggap tidak valid oleh program.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
  
@@ -341,12 +346,10 @@ Saat pengguna mencoba mengetik "iya" di kolom ID, program menolak input tersebut
 
 <img width="1269" height="729" alt="image" src="https://github.com/user-attachments/assets/d80d2100-c4d4-493d-b14f-b5af4682ec76" />
 
-Ketika pengguna memilih opsi 4 pada menu utama, maka program akan diarahkan ke fitur Hapus Barang. Ketika program di jalankan, akan ditampilkan terlebih dahulu daftar barang yang ada di Antikaethetic agar bisa melihan pada ID berapa barang ingin dihapus.
+Ketika pengguna memilih opsi 4 pada menu utama, sistem akan mengarahkan ke fitur Hapus Barang. Pada saat fitur ini dijalankan, program terlebih dahulu menampilkan daftar seluruh barang yang ada di koleksi AntikAesthetic. Dengan demikian, pengguna dapat melihat ID masing-masing barang sebelum menentukan data mana yang ingin dihapus.
+
 
 <img width="319" height="81" alt="image" src="https://github.com/user-attachments/assets/43875892-1e22-43b7-b704-2e3e6f03f3b7" />
-
-
-Ketika pengguna mengetik angka 4 pada menu utama, sistem akan langsung mengarahkan ke fitur Hapus Barang. Pada tahap ini, program meminta pengguna untuk memasukkan ID barang yang ingin dihapus. ID ini berfungsi sebagai identitas unik setiap data, sehingga sistem tahu data mana yang dituju.
 
 Setelah ID dimasukkan, sistem akan melakukan pengecekan apakah ID tersebut benar-benar ada di dalam daftar koleksi barang atau tidak. Jika ID ditemukan, sistem tidak akan langsung menghapus data barangnya, melainkan akan memberikan konfirmasi tambahan berupa pertanyaan "Yakin hapus ID... (y/n)?". Konfirmasi ini dibuat untuk menghindari kesalahan pengguna, misalnya jika tanpa sengaja salah mengetik ID.
 
@@ -370,17 +373,22 @@ Sebaliknya, jika pengguna mengetik y, maka sistem akan benar-benar menghapus dat
 
 <img width="373" height="110" alt="image" src="https://github.com/user-attachments/assets/0de4c638-2bb7-4415-ab85-288858d2abbc" />
 
+Apabila pengguna memasukkan ID yang tidak ada dalam daftar koleksi, sistem akan menolak input tersebut dan menampilkan pesan:
 
-Jika ID tidak terdaftar, sistem menampilkan “Data dengan ID .. tidak ditemukan.”. 
+"Data dengan ID ... tidak ditemukan."
+
+Pesan ini berfungsi sebagai validasi untuk memberi tahu pengguna bahwa ID yang dimasukkan salah atau tidak tersedia. Dengan begitu, pengguna dapat segera memperbaikinya sebelum melanjutkan.
 
 ### Jika Input ID selain angka
 
 
 <img width="407" height="140" alt="image" src="https://github.com/user-attachments/assets/3e0cab4e-187a-4b04-8df1-d67ae3adfa16" />
 
+Jika pengguna memasukkan input bukan berupa angka, misalnya mengetik huruf seperti "iya" atau "tidak", sistem akan menolak masukan tersebut dan memberikan peringatan:
 
-Jika yang dimasukkan bukan berupa angka tapi huruf, sistem menolak dengan pesan “Harus berupa angka”. Setelah itu, tekan Enter untuk kembali ke menu utama.
+"Harus berupa angka."
 
+Validasi ini memastikan bahwa hanya angka yang dapat diterima pada kolom ID, sehingga sistem dapat memproses perintah dengan benar. Setelah itu, pengguna perlu mengulangi input hingga sesuai dengan aturan.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -423,17 +431,21 @@ Dengan adanya ringkasan tersebut, pengguna tidak hanya melihat data mentah, teta
 
 <img width="588" height="162" alt="image" src="https://github.com/user-attachments/assets/5ef731a9-287d-4d20-a71d-da1a0da3b06d" />
 
+ika pengguna mengetikkan kata kunci yang tidak cocok dengan data apa pun, sistem akan menampilkan pesan seperti:
 
-Jika pengguna mengetik kata kunci yang tidak cocok dengan data apa pun, sistem akan menampilkan pesan “Oops.. Tidak ada hasil untuk: ...”
+Oops.. Tidak ada hasil untuk: ...
+
+Pesan ini berfungsi untuk memberi tahu pengguna bahwa barang dengan kata kunci tersebut tidak ada di dalam koleksi.
 
 ### Inputan Kosong
 
 <img width="578" height="157" alt="image" src="https://github.com/user-attachments/assets/ede3fd20-64ed-47df-b22f-cde8efca027c" />
 
+Jika kolom kata kunci dibiarkan kosong, sistem otomatis menolak input tersebut dan menampilkan peringatan:
 
-Jika kolom Kata kunci dibiarkan kosong, sistem akan menolak dan menampilkan pesan “Input tidak boleh kosong”.
+Input tidak boleh kosong
 
-Setelah itu, pengguna akan diminta mengetik ulang sampai mengisi kata kunci yang valid.
+Setelah itu, pengguna akan diminta kembali untuk memasukkan kata kunci yang valid. Dengan begitu, sistem memastikan bahwa pencarian selalu dilakukan menggunakan kata kunci yang benar.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
